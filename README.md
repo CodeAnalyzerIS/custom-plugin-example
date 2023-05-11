@@ -36,20 +36,18 @@ you can check the source code dependencies and add the following line to the one
 ```
 Your package reference could look like this:  
 ```
-<PackageReference Include="CodeAnalyzerTool.RoslynPlugin.API" Version="0.0.5" >
-    <ExcludeAssets>runtime</ExcludeAssets>
-</PackageReference>
+<ItemGroup>
+    <PackageReference Include="CodeAnalyzerTool.API" Version="0.0.2">
+        <ExcludeAssets>runtime</ExcludeAssets>
+    </PackageReference>
+</ItemGroup>
 ```
   
 After you have done these configurations, you can build the project but make sure the `.csproj` changes were saved.  
 
 Once the files were generated, go to the directory where they were generated and copy them all.  
-Then paste the files in the plugin folder which is specified by the configuration file (more information on that can be found here: https://github.com/CodeAnalyzerIS/code-analyzer-tool/wiki/Configuration)  
+Then paste the files in the plugin folder which is specified by the configuration file (more information on that can be found [here](https://github.com/CodeAnalyzerIS/code-analyzer-tool/wiki/Configuration).
 
-Our example for the directory structure was:  
-rootOfRepository/CAT/Roslyn/rules/LicenseCheck/
-  
-IMPORTANT:  
-Make sure to use the 'rules' folder in the Roslyn plugin folder and then use the name specified in the rule as `DiagnosticId` as foldername for the rule files.  
+In this example plugin the configuration file specifies the directory as `*root*/CAT/readme/`. 
 
-If you run the tool now, the custom rule should be implemented by the tool.
+If you run the tool after doing these steps, the custom Plugin should automatically be loaded into and run by the tool.
