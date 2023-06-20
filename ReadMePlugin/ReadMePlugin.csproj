@@ -8,7 +8,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="CodeAnalyzerTool.API" Version="0.0.2">
+        <PackageReference Include="CodeAnalyzerTool.API" Version="0.0.28">
             <ExcludeAssets>runtime</ExcludeAssets>
         </PackageReference>
     </ItemGroup>
