@@ -25,8 +25,11 @@ public class ReadMePlugin : IPlugin
             defaultSeverity: Severity.Warning
         );
         
+        var parentPath = Path.GetDirectoryName(Directory.GetCurrentDirectory())!;
+        var path = Path.GetRelativePath(parentPath, cd).Replace('\\', '/');
+
         var location = new Location(
-            path: cd,
+            path: path,
             startLine: 0,
             endLine: 0,
             fileExtension: ".md"
